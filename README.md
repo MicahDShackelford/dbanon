@@ -1,12 +1,12 @@
 # dbanon
 
-[![Build Status](https://github.com/mpchadwick/dbanon/actions/workflows/ci.yml/badge.svg)](https://github.com/mpchadwick/dbanon/actions) [![codecov](https://codecov.io/gh/mpchadwick/dbanon/branch/master/graph/badge.svg)](https://codecov.io/gh/mpchadwick/dbanon)
+[![Build Status](https://github.com/MicahDShackelford/dbanon/actions/workflows/ci.yml/badge.svg)](https://github.com/MicahDShackelford/dbanon/actions) [![codecov](https://codecov.io/gh/mpchadwick/dbanon/branch/master/graph/badge.svg)](https://codecov.io/gh/mpchadwick/dbanon)
 
 A run-anywhere, dependency-less database anonymizer.
 
 ## Installation
 
-Download [the latest release from GitHub](https://github.com/mpchadwick/dbanon/releases).
+Download [the latest release from GitHub](https://github.com/MicahDShackelford/dbanon/releases).
 
 ## Usage
 
@@ -56,9 +56,9 @@ mysqldump mydb | dbanon -config=myconfig.yml | gzip > mydb.sql.gz
 
 See [the `etc` directory](etc/) for examples.
 
-Columns are specified as key / value pairs. The value string winds up getting passed to [this function](https://github.com/mpchadwick/dbanon/blob/ade634a10bc282c06fecef115afbdd6661a94277/src/provider.go#L36), which gets random values from [`dmgk/faker`](https://github.com/dmgk/faker).
+Columns are specified as key / value pairs. The value string winds up getting passed to [this function](https://github.com/MicahDShackelford/dbanon/blob/ade634a10bc282c06fecef115afbdd6661a94277/src/provider.go#L36), which gets random values from [`dmgk/faker`](https://github.com/dmgk/faker).
 
-It is also possible to pass direct Faker function calls for [supported "raw providers"](https://github.com/mpchadwick/dbanon/blob/ade634a10bc282c06fecef115afbdd6661a94277/src/provider.go#L13-L17)
+It is also possible to pass direct Faker function calls for [supported "raw providers"](https://github.com/MicahDShackelford/dbanon/blob/ade634a10bc282c06fecef115afbdd6661a94277/src/provider.go#L13-L17)
 
 ## Logging
 

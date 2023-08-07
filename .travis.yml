@@ -5,7 +5,7 @@ go:
   - 1.14
   - 1.15
 
-go_import_path: github.com/mpchadwick/dbanon
+go_import_path: github.com/MicahDShackelford/dbanon
 
 before_script:
   - curl -sfL https://raw.githubusercontent.com/knqyf263/cob/master/install.sh | sudo sh -s -- -b /usr/local/bin

@@ -8,12 +8,12 @@ build:
 	go install github.com/shuLhan/go-bindata/v4/cmd/go-bindata@master
 	$$GOPATH/bin/go-bindata -pkg bindata -o bindata/bindata.go etc/*
 	go get ./...
-	go test -coverprofile=coverage.out -covermode=atomic -race $$GOPATH/src/github.com/mpchadwick/dbanon/src
+	go test -coverprofile=coverage.out -covermode=atomic -race $$GOPATH/src/github.com/MicahDShackelford/dbanon/src
 	go build -ldflags "$(LDFLAGS)" -o dbanon main.go
-	go test $$GOPATH/src/github.com/mpchadwick/dbanon/integration
+	go test $$GOPATH/src/github.com/MicahDShackelford/dbanon/integration
 	rm -rf bindata
 
 bench:
 	$$GOPATH/bin/go-bindata -pkg bindata -o bindata/bindata.go etc/*
-	go test -run=XXX -bench=. -benchtime=20s $$GOPATH/src/github.com/mpchadwick/dbanon/src
+	go test -run=XXX -bench=. -benchtime=20s $$GOPATH/src/github.com/MicahDShackelford/dbanon/src
 	rm -rf bindata

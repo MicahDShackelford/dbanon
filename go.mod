@@ -1,4 +1,4 @@
-module github.com/mpchadwick/dbanon
+module github.com/MicahDShackelford/dbanon
 
 go 1.12
 
@@ -11,6 +11,7 @@ require (
 	github.com/blang/semver v3.5.1+incompatible
 	github.com/blastrain/vitess-sqlparser v0.0.0-20200914074247-af18b79da035
 	github.com/golang/glog v1.0.0 // indirect
+	github.com/google/uuid v1.3.0 // indirect
 	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0 // indirect
 	github.com/opentracing-contrib/go-grpc v0.0.0-20210225150812-73cb765af46e // indirect
 	github.com/prometheus/client_golang v1.12.2 // indirect

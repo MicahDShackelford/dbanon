@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/mdshack/dbanon/compare/v1.0.1...v1.1.0) (2023-09-23)
+
+
+### Features
+
+* gorelease ([dc816ba](https://github.com/mdshack/dbanon/commit/dc816ba63f2c4ec2d6306932e39976f57f88d31c))
+* release jobs ([ba42a66](https://github.com/mdshack/dbanon/commit/ba42a66d18d805365de24e2b203626e93b353c05))
+
 ## [1.0.1](https://github.com/mdshack/dbanon/compare/v1.0.0...v1.0.1) (2023-09-23)
 
 

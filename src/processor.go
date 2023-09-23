@@ -71,7 +71,7 @@ func (p LineProcessor) processInsert(s string) string {
 			switch v := e.(type) {
 			case *sqlparser.Literal:
 				if processor == "table" {
-					v.Val = p.Provider.Get(dataType)
+					v.Val = p.Provider.Get(dataType, &v.Val)
 				} else {
 					if column == "attribute_id" {
 						attributeId = string(v.Val)
@@ -80,7 +80,7 @@ func (p LineProcessor) processInsert(s string) string {
 						}
 					}
 					if column == "value" && result {
-						v.Val = p.Provider.Get(dataType)
+						v.Val = p.Provider.Get(dataType, &v.Val)
 					}
 					if p.Mode == "map-eav" {
 						if column == "entity_type_id" {

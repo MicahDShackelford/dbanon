@@ -16,7 +16,7 @@ func NewTestProvider() *TestProvider {
 	return p
 }
 
-func (p TestProvider) Get(s string) string {
+func (p TestProvider) Get(s string, currentValue *string) string {
 	return s
 }
 
@@ -59,7 +59,7 @@ func TestProcessLine(t *testing.T) {
 	processor.ProcessLine(") ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='Admin User Table'")
 	processor.ProcessLine("/*!40101 SET character_set_client = @saved_cs_client */;")
 
-	r2 := processor.ProcessLine("INSERT INTO `admin_user` (`firstname`) VALUES ('bob');")
+	r2 := processor.ProcessLine("INSERT INTO `admin_user` (`firstname`) VALUES ('bob'),('joe'),('steve');")
 	if strings.Contains(r2, "bob") {
 		t.Error("Got bob wanted no bob")
 	}

@@ -2,15 +2,7 @@ VERSION := $(shell git describe --tags 2>/dev/null)
 LDFLAGS = -X main.version=$(VERSION)
 
 build:
-	rm -rf bindata
-	go get -u github.com/shuLhan/go-bindata/...
-	go install github.com/shuLhan/go-bindata/v4/cmd/go-bindata@master
-	$$GOPATH/bin/go-bindata -pkg bindata -o bindata/bindata.go etc/*
-	go get ./...
-	go test -coverprofile=coverage.out -covermode=atomic -race $$GOPATH/src/github.com/mdshack/dbanon/src
 	go build -ldflags "$(LDFLAGS)" -o dbanon main.go
-	go test $$GOPATH/src/github.com/mdshack/dbanon/integration
-	rm -rf bindata
 
 bench:
 	$$GOPATH/bin/go-bindata -pkg bindata -o bindata/bindata.go etc/*

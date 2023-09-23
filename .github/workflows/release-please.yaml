@@ -17,3 +17,20 @@ jobs:
         with:
           release-type: go
           package-name: mdshack/dbanon
+
+      # Release the latest binary
+      - name: Checkout
+        if: ${{ steps.release.outputs.release_created }}
+        uses: actions/checkout@v3
+        with:
+          ref: '${{ steps.release.outputs.tag_name }}'
+      - uses: actions/setup-go@v4
+        if: ${{ steps.release.outputs.release_created }}
+      - name: Build binary
+        if: ${{ steps.release.outputs.release_created }}
+        run: go build -mod vendor -o dbanon
+      - name: Release
+        if: ${{ steps.release.outputs.release_created }}
+        run: gh release upload ${{ steps.release.outputs.tag_name }} dbanon
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

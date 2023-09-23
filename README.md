@@ -53,9 +53,10 @@ These are basic faking rules that don't accept any arguments or know/care about 
 These are more advanced rules that accept arguments and can be impacted by the current value of the cell.
 
 ##### `dynamic.email`
-arguments: 
+**arguments**
 - `ignoreEmail` - Any emails with this suffix will not be faked.
-example
+
+**example**
 ```
 rule = dyanmic.email(@test.com)
 current cell value = blam@test.com

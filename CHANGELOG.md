@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/mdshack/dbanon/compare/v1.0.0...v1.0.1) (2023-09-23)
+
+
+### Bug Fixes
+
+* add vendor ([2543d15](https://github.com/mdshack/dbanon/commit/2543d15276ee1931ebad7c7cbaba6fd36f407a09))
+
 ## 1.0.0 (2023-09-23)
 
 

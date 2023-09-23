@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/mdshack/dbanon/compare/v1.1.0...v1.1.1) (2023-09-23)
+
+
+### Bug Fixes
+
+* release id ([5fec831](https://github.com/mdshack/dbanon/commit/5fec83106ec2f25180714897adab063e7a079b79))
+
 ## [1.1.0](https://github.com/mdshack/dbanon/compare/v1.0.1...v1.1.0) (2023-09-23)
 
 

@@ -1,4 +1,4 @@
-module github.com/MicahDShackelford/dbanon
+module github.com/mdshack/dbanon
 
 go 1.12
 

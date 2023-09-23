@@ -2,7 +2,7 @@ package dbanon
 
 import (
 	"errors"
-	"github.com/MicahDShackelford/dbanon/bindata"
+	"github.com/mdshack/dbanon/bindata"
 	"gopkg.in/yaml.v2"
 	"io/ioutil"
 	"strings"

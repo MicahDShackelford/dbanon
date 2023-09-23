@@ -5,7 +5,7 @@ import (
 	"flag"
 	"fmt"
 	"github.com/blang/semver"
-	"github.com/MicahDShackelford/dbanon/src"
+	"github.com/mdshack/dbanon/src"
 	"github.com/rhysd/go-github-selfupdate/selfupdate"
 	"github.com/sirupsen/logrus"
 	"io/ioutil"

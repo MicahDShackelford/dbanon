@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.3](https://github.com/mdshack/dbanon/compare/v1.1.2...v1.1.3) (2023-09-23)
+
+
+### Bug Fixes
+
+* drop bindata ([3c31208](https://github.com/mdshack/dbanon/commit/3c31208f98a4b3a6d2216c626ab2b4b3c78dc410))
+
 ## [1.1.2](https://github.com/mdshack/dbanon/compare/v1.1.1...v1.1.2) (2023-09-23)
 
 

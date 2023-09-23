@@ -3,7 +3,6 @@ LDFLAGS = -X main.version=$(VERSION)
 
 build:
 	rm -rf bindata
-	test -z $(shell gofmt -l ./)
 	go get -u github.com/shuLhan/go-bindata/...
 	go install github.com/shuLhan/go-bindata/v4/cmd/go-bindata@master
 	$$GOPATH/bin/go-bindata -pkg bindata -o bindata/bindata.go etc/*

@@ -1,6 +1,6 @@
 # dbanon
 
-[![Build Status](https://github.com/mdshack/dbanon/actions/workflows/ci.yml/badge.svg)](https://github.com/mdshack/dbanon/actions) [![codecov](https://codecov.io/gh/mpchadwick/dbanon/branch/master/graph/badge.svg)](https://codecov.io/gh/mpchadwick/dbanon)
+[![Release Status](https://github.com/mdshack/dbanon/actions/workflows/release-please.yaml/badge.svg)](https://github.com/mdshack/dbanon/actions) [![codecov](https://codecov.io/gh/mpchadwick/dbanon/branch/master/graph/badge.svg)](https://codecov.io/gh/mdshack/dbanon)
 
 A run-anywhere, dependency-less database anonymizer.
 
@@ -17,6 +17,54 @@ mysqldump mydb | dbanon -config=myconfig.yml | gzip > mydb.sql.gz
 ```
 
 The `-config` flag can use bundled configurations or point to the path of a custom configuration file. 
+
+### Rules
+
+#### Static
+
+These are basic faking rules that don't accept any arguments or know/care about the current value of a cell.
+
+##### `first_name`
+##### `last_name`
+##### `full_name`
+##### `company_name`
+##### `username`
+##### `password`
+##### `ipv4`
+##### `url`
+##### `linkedin_url`
+##### `md5`
+##### `uuid`
+##### `json`
+##### `query_params`
+##### `datetime`
+##### `state`
+##### `city`
+##### `postcode`
+##### `street`
+##### `country_code`
+##### `money`
+##### `money_decimal`
+##### `email`
+##### `telephone`
+
+#### Dynamic
+
+These are more advanced rules that accept arguments and can be impacted by the current value of the cell.
+
+##### `dynamic.email`
+arguments: 
+- `ignoreEmail` - Any emails with this suffix will not be faked.
+example
+```
+rule = dyanmic.email(@test.com)
+current cell value = blam@test.com
+after dbanon = blam@test.com
+
+rule = dyanmic.email(@test.com)
+current cell value = test@blam.com
+after dbanon = random@fake.email
+```
 
 ### Configuration
 

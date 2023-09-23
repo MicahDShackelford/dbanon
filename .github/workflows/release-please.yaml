@@ -24,13 +24,10 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: '${{ steps.release.outputs.tag_name }}'
-      - uses: actions/setup-go@v4
+      - uses: goreleaser/goreleaser-action@v2
         if: ${{ steps.release.outputs.release_created }}
-      - name: Build binary
-        if: ${{ steps.release.outputs.release_created }}
-        run: go build -mod vendor -o dbanon
-      - name: Release
-        if: ${{ steps.release.outputs.release_created }}
-        run: gh release upload ${{ steps.release.outputs.tag_name }} dbanon
+        with:
+          version: latest
+          args: release --rm-dist
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

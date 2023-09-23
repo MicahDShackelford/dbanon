@@ -17,6 +17,7 @@ jobs:
         with:
           release-type: go
           package-name: mdshack/dbanon
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       # Release the latest binary
       - name: Checkout

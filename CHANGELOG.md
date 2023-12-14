@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/mdshack/dbanon/compare/v1.1.3...v1.2.0) (2023-12-14)
+
+
+### Features
+
+* migrate to vitess.io/vitess/go/vt/sqlparser ([65f0bd6](https://github.com/mdshack/dbanon/commit/65f0bd6dd22adb5970a58f737d883c2ab8e66f68))
+
 ## [1.1.3](https://github.com/mdshack/dbanon/compare/v1.1.2...v1.1.3) (2023-09-23)
 
 

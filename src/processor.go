@@ -2,6 +2,7 @@ package dbanon
 
 import (
 	"strings"
+
 	"vitess.io/vitess/go/vt/sqlparser"
 )
 
@@ -41,7 +42,8 @@ func (p LineProcessor) processInsert(s string) string {
 		return s
 	}
 
-	table := insert.Table.Name.String()
+	t, _ := insert.Table.TableName()
+	table := t.Name.String()
 
 	processor := p.Config.ProcessTable(table)
 
